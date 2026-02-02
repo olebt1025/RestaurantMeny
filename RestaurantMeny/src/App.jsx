@@ -5,11 +5,23 @@ import './App.css'
 
 function App() {
   
+  const kategoriRekkefølge = {
+    Forrett:1,
+    Hovedrett:2,
+    Dessert:3,
+  };
+
+  const sorterMeny = [...meny].sort(
+    (a, b) => 
+      kategoriRekkefølge[a.kategori] - 
+      kategoriRekkefølge[b.kategori]
+  );
+  
 
   return (
     <>
       <h1>Meny</h1>
-      <MenyListe meny={meny}/>
+      <MenyListe meny={sorterMeny}/>
     </>
   );
 }
