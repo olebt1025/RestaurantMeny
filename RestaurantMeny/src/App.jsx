@@ -2,6 +2,7 @@
 import meny from "./Data";
 import MenyListe from "./menyListe"
 import './App.css'
+import "./meny.css"
 
 function App() {
   

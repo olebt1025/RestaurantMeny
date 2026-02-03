@@ -1,30 +1,31 @@
+
+
 import MenyKort from "./MenyKort";
 
 const MenyListe = ({ meny }) => {
-    let forrigeKategori = "";
-    
-    return (
-        <div className="meny-grid">
-        {meny.map((rett) => {
-            const nyKategori =
-            rett.kategori !==forrigeKategori;
-            forrigeKategori = rett.kategori;
+  let forrigeKategori = "";
 
-            return (
-                <div key={rett.id}>
-                    {nyKategori && (
-                    <h2 className="kategori-overskrift">
-                                {rett.kategori}
-                    </h2>
-                    )}
+  return (
+    <div className="meny-grid">
+      {meny.map((rett) => {
+        const nyKategori =
+          rett.kategori !== forrigeKategori;
+        forrigeKategori = rett.kategori;
 
-                    <MenyKort rett={rett}/>
+        return (
+          <div key={rett.id}>
+            {nyKategori && (
+              <h2 className="kategori-overskrift">
+                {rett.kategori}
+              </h2>
+            )}
 
-                </div>
-                );
-            })}
-        <div/>
-    );
+            <MenyKort rett={rett} />
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default MenyListe;
