@@ -9,18 +9,23 @@
 }
 
 h1 {
-
+    border-bottom: white 7px solid;
+    text-shadow: 0px 0px 5px black;
 }
 
 h2 {
-
+    border-bottom: white 2px solid;
+    text-shadow: 0px 0px 5px black;
 }
 
 .meny-kort{
   border: black solid 5px;
-  margin: 10px;
+  border-radius: 5px;
+  margin: 20px;
   padding: 10px;
   min-width: 300px;
+  box-shadow: 5px 5px 10px black;
+  
 }
 
 .kategori {
@@ -36,7 +41,9 @@ strong {
 }
 
 .pris-kontainer{
-  border: solid black 2px;
+  border: solid white 2px;
+  border-radius: 5px;
+  background: rgb(145, 88, 137);
 }
 
 .pris-kontainer:hover .pris{
